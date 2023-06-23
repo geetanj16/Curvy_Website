@@ -14,7 +14,64 @@
             margin: 0;
             font-family: 'Montserrat Alternates', sans-serif;
             color: white;
-            background: black;
+            background:#131313;
+            overflow-x: hidden;
+        }
+
+        section{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding: 100px 20vw;
+            
+        }
+
+        .blue{
+            background: blue;
+        }
+        .red{
+            background: red;
+        }
+        .orange{
+            background: orange;
+        }
+        .pink{
+            background: pink;
+        }
+        .dark{
+            background: #131313;
+        }
+
+        .curve{
+            position: absolute;
+            height: 225px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .curve::before{
+            content:'';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color:#131313;
+            transform:translate(85%, 60%) ;
+            
+        }
+        .curve::after{
+            content:'';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: blue;
+            transform:translate(-4%,40%) ;
+            z-index: -1;
         }
     </style>
 
@@ -23,11 +80,14 @@
 </head>
 
 <body>
-    <section>
+    <section class="blue">
         <h1>Nice Curves</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus repellendus molestiae facilis labore
             repudiandae ex, porro a cupiditate esse suscipit doloremque laboriosam quidem, eum illum, minima nisi odit!
             Necessitatibus, magnam?</p>
+            <div class="curve">
+
+            </div>
     </section>
     <section>
         <h1>Nice Curves</h1>

@@ -7,72 +7,114 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lora:wght@500&family=Montserrat+Alternates:wght@200&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lora:wght@500&family=Montserrat+Alternates:wght@200&display=swap"
+        rel="stylesheet">
 
     <style>
-        body{
+        body {
             margin: 0;
             font-family: 'Montserrat Alternates', sans-serif;
             color: white;
-            background:#131313;
+            background: #202731;
             overflow-x: hidden;
+            z-index: -2;
         }
 
-        section{
+        section {
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 400px;
             padding: 100px 20vw;
-            
+
         }
 
-        .blue{
+        .blue {
             background: blue;
         }
-        .red{
+
+        .red {
             background: red;
         }
-        .orange{
+
+        .orange {
             background: orange;
         }
-        .pink{
+
+        .pink {
             background: pink;
         }
-        .dark{
-            background: #131313;
+
+        .dark {
+            background: #0f0f10;
         }
 
-        .curve{
+        .curve {
             position: absolute;
             height: 225px;
             width: 100%;
             bottom: 0;
         }
 
-        .curve::before{
-            content:'';
+        .curve::before {
+            content: '';
             display: block;
             position: absolute;
             border-radius: 100% 50%;
             width: 55%;
             height: 100%;
-            background-color:#131313;
-            transform:translate(85%, 60%) ;
-            
+            transform: translate(85%, 60%);
+            background-color: hsl(216, 21%, 16%);
         }
-        .curve::after{
-            content:'';
+
+        .curve::after {
+            content: '';
             display: block;
             position: absolute;
             border-radius: 100% 50%;
             width: 55%;
             height: 100%;
             background-color: blue;
-            transform:translate(-4%,40%) ;
+            transform: translate(-4%, 40%);
             z-index: -1;
         }
+
+        .bubble::after {
+            content: '';
+            border-top-left-radius: 50% 100%;
+            border-top-right-radius: 50% 100%;
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            width: 100%;
+            background-color: #0f0f10;
+            height: 85%;
+        }
+
+
+        .wave{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wavesvg {
+    position: relative;
+    display: block;
+    width: calc(130% + 1.3px);
+    height: 346px;
+}
+
+.wave.shape-fill {
+    fill: #1D1D1D;
+}
+
+
     </style>
 
 
@@ -85,9 +127,9 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus repellendus molestiae facilis labore
             repudiandae ex, porro a cupiditate esse suscipit doloremque laboriosam quidem, eum illum, minima nisi odit!
             Necessitatibus, magnam?</p>
-            <div class="curve">
+        <div class="curve">
 
-            </div>
+        </div>
     </section>
     <section>
         <h1>Nice Curves</h1>
@@ -95,22 +137,30 @@
             eveniet non? Deleniti, reiciendis voluptas. Officia porro atque ut! Ratione voluptas, aperiam fugiat sed aut
             natus?</p>
     </section>
-    <section>
+    <section class="bubble">
         <h1>Nice Curves</h1>
         <p>Vel odit, numquam quis, ab quidem consequuntur, veritatis asperiores dolore blanditiis voluptas voluptate
             tenetur natus tempora dicta quisquam ipsam. Doloribus, fugit nesciunt impedit laudantium adipisci excepturi
             dolor laborum tenetur recusandae.</p>
     </section>
-    <section>
+    <section class="dark">
         <h1>Nice Curves</h1>
         <p>Impedit molestiae culpa animi eligendi tempore delectus repudiandae aperiam vitae sapiente illum veniam ad
             nobis adipisci rerum sequi nostrum incidunt facere est totam quo voluptatum, ab voluptate. Dolorum, esse
             facere?</p>
     </section>
-    <section>
+    <section class="red">
         <h1>Nice Curves</h1>
         <p>Eius ea ducimus nemo ipsam ratione? Accusamus magnam impedit enim magni labore in officiis iure soluta at,
             illo rem numquam ullam ad aspernatur? Consectetur esse itaque cumque accusamus earum. Aliquid?</p>
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
     </section>
     <section>
         <h1>Nice Curves</h1>
